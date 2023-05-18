@@ -9,6 +9,7 @@ const StyleContainer = styled.div`
   max-width: 1200px;
   display: flex;
   justify-content: space-between;
+  gap: 2rem;
   margin: auto;
   align-items: center;
   padding: 15px 0;

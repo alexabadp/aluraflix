@@ -2,8 +2,11 @@ import logo from "../images/logo.png";
 import styled from "styled-components";
 
 const StyleImg = styled.img`
-  width: 168px;
+  max-width: 168px;
   height: 40px;
+
+  @media (min-width: 768px) {
+  }
 `;
 
 const Logo = () => {

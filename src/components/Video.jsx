@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const StyleCard = styled.div`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  max-width: 320px;
+  /* max-width: 320px; */
   margin: auto 1rem;
   text-align: center;
 `;
@@ -20,9 +20,12 @@ const StyleVideo = styled.video`
 const Video = (props) => {
   return (
     <StyleCard>
-      <StyleVideo src={props.videourl} muted loop>
-        <source src="../../../video/concierto.mp4" type="video/mp4" />
-      </StyleVideo>
+      <img
+        width="100%"
+        height="100%"
+        src="https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+        alt=""
+      />
     </StyleCard>
   );
 };

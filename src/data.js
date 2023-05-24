@@ -2,20 +2,23 @@ export const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 1024 },
-    items: 4,
-    slidesToSlide: 2,
+    items: 3,
+    partialVisibilityGutter: 40,
   },
   desktop: {
     breakpoint: { max: 1024, min: 800 },
     items: 3,
+    partialVisibilityGutter: 30,
   },
   tablet: {
     breakpoint: { max: 800, min: 464 },
     items: 2,
+    partialVisibilityGutter: 30,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
     items: 1,
+    partialVisibilityGutter: 30,
   },
 };
 
@@ -139,5 +142,43 @@ export const videoData = [
     id: 24,
     videourl: "../../../video/concierto.mp4",
     categoria: "gestion",
+  },
+];
+
+export const categoriaData = [
+  {
+    id: 1,
+    nombre: "Back End",
+    descripcion: "Todos los video que estoy usando para estudiar Back End",
+  },
+  {
+    id: 2,
+    nombre: "Mobile",
+    descripcion: "Contenido que vengo estudiando sobre React Native y Flutter",
+  },
+  {
+    id: 3,
+    nombre: "Infraestrutura",
+    descripcion: "Todo lo que estoy aprendiendo sobre Docker y mucho mas",
+  },
+  {
+    id: 4,
+    nombre: "Data Science",
+    descripcion: "Cosas de React y Python que vengo aprendiendo",
+  },
+  {
+    id: 5,
+    nombre: "Design & UX",
+    descripcion: "Herramientas y técnicas que estudio sobre UX y Design",
+  },
+  {
+    id: 6,
+    nombre: "Marketing Digital",
+    descripcion: "La forma de vender y monetizar mis ideas",
+  },
+  {
+    id: 7,
+    nombre: "Inovacion & Gestion",
+    descripcion: "Como mantener el equipo felíz y mucho mas",
   },
 ];

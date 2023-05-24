@@ -29,24 +29,42 @@ const SectionVideos = () => {
     <Video key={e.id} url={e.videourl} />
   ));
 
-  const videobackend = videoData.filter((e) => e.categoria == "backend");
-  const backend = videobackend.map((e) => (
-    <Video key={e.id} url={e.videourl} />
-  ));
-
-  const videogestion = videoData.filter((e) => e.categoria == "gestion");
-  const gestion = videogestion.map((e) => (
-    <Video key={e.id} url={e.videourl} />
-  ));
-
   return (
     <StyleBackground>
+      {/* Esto tambien debe venir de un prop */}
       <StyleCategoria>Front End</StyleCategoria>
-      <Carousel responsive={responsive}>{frontend}</Carousel>
-      <StyleCategoria>Back End</StyleCategoria>
-      <Carousel responsive={responsive}>{backend}</Carousel>
-      <StyleCategoria>Gestion e Innovacion</StyleCategoria>
-      <Carousel responsive={responsive}>{gestion}</Carousel>
+      <Carousel
+        additionalTransfrom={0}
+        arrows
+        autoPlaySpeed={3000}
+        centerMode={false}
+        className=""
+        containerClass="container"
+        dotListClass=""
+        draggable
+        focusOnSelect={false}
+        infinite={false}
+        itemClass=""
+        keyBoardControl
+        minimumTouchDrag={80}
+        partialVisible
+        pauseOnHover
+        renderArrowsWhenDisabled={false}
+        renderButtonGroupOutside={false}
+        renderDotsOutside={false}
+        responsive={responsive}
+        rewind={false}
+        rewindWithAnimation={false}
+        rtl={false}
+        shouldResetAutoplay
+        showDots={false}
+        sliderClass=""
+        slidesToSlide={1}
+        swipeable
+      >
+        {/* Esto debe venir de un prop */}
+        {frontend}
+      </Carousel>
     </StyleBackground>
   );
 };

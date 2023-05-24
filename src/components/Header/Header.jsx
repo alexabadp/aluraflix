@@ -1,42 +1,31 @@
-// import styled from "styled-components";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
+import Brightness6Icon from "@mui/icons-material/Brightness6";
 
-// const StyleHeader = styled.header`
-//   background: #000;
-// `;
+import logo from "../../images/logo.png";
 
-// const StyleContainer = styled.div`
-//   width: 95%;
-//   max-width: 1200px;
-//   display: flex;
-//   justify-content: space-between;
-//   gap: 2rem;
-//   margin: auto;
-//   align-items: center;
-//   padding: 15px 0;
-// `;
-
-// const StyleButtonNewVideo = styled.button`
-//   width: 180px;
-//   height: 54px;
-//   background: #000;
-//   border: 1px solid #f5f5f5;
-//   color: #fff;
-//   border-radius: 4px;
-//   font-size: 21px;
-// `;
-
-// import Logo from "../Logo";
-
-const Header = () => {
+export default function ButtonAppBar() {
   return (
-    <></>
-    // <StyleHeader>
-    //   <StyleContainer>
-    //     <Logo />
-    //     <StyleButtonNewVideo>Nuevo Video</StyleButtonNewVideo>
-    //   </StyleContainer>
-    // </StyleHeader>
-  );
-};
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static" color="inherit">
+        <Toolbar sx={{ justifyContent: "space-between" }}>
+          <Button variant="text">
+            <img width="168px" height="40px" src={logo} alt="" />
+          </Button>
+          <Toolbar>
+            <IconButton edge="start" color="inherit">
+              <Brightness6Icon />
+            </IconButton>
 
-export default Header;
+            <Button variant="outlined" color="inherit">
+              Login
+            </Button>
+          </Toolbar>
+        </Toolbar>
+      </AppBar>
+    </Box>
+  );
+}
